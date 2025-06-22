@@ -28,60 +28,17 @@ font-family: Arial, sans-serif;
 
 }
 
-/* login 
-
-.login-container {
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #ccc;
-}
-
-h2 {
-    color: #003366;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #003366;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0055aa;
-}
-
-#error-message {
-    color: red;
-    font-size: 14px;
-}
-
-*/
 
 
 /* --- Responsive Login Container --- */
 .login-container {
-    /* Use max-width to prevent it from getting too wide on large screens */
+    
     max-width: 400px; 
     
-    /* Use a percentage width to allow it to shrink on smaller screens */
+
     width: 90%; 
     
-    /* Center the container with automatic horizontal margins */
+    
     margin: 50px auto; 
     
     padding: 25px;
@@ -89,11 +46,11 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     
-    /* This makes padding and borders part of the element's total width/height */
+    
     box-sizing: border-box; 
 }
 
-/* Style the form elements for a cleaner look */
+
 .login-container h2 {
     text-align: center;
     color: #333;
@@ -120,7 +77,7 @@ button:hover {
 .login-container button {
     width: 100%;
     padding: 12px;
-    background-color: #0073e6; /* A professional blue */
+    background-color: #0073e6; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -130,7 +87,7 @@ button:hover {
 }
 
 .login-container button:hover {
-    background-color: #005bb5; /* A darker shade for hover */
+    background-color: #005bb5; 
 }
 
 /* --- Media Query for Small Screens (e.g., Mobile Phones) --- */

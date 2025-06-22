@@ -33,10 +33,7 @@ header {
 
 .gallery-grid {
     display: grid;
-    /* Creates a responsive grid: 
-       - auto-fit: Fits as many columns as possible.
-       - minmax(250px, 1fr): Each column is at least 250px wide and can grow to fill space.
-    */
+    /* Creates a responsive grid:  */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
@@ -44,7 +41,7 @@ header {
 .gallery-grid img {
     width: 100%;
     height: 200px; /* Fixed height for a uniform look */
-    object-fit: cover; /* Ensures image covers the area without distortion */
+    object-fit: cover; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -58,14 +55,14 @@ header {
 
 /* --- Modal Styles --- */
 .modal {
-    position: fixed; /* Stays in place even if you scroll */
-    z-index: 1000; /* Sits on top of everything */
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black with opacity */
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
     display: flex;
     justify-content: center;
     align-items: center;
