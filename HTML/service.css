@@ -1,11 +1,34 @@
 body {
-    font-family: Arial, sans-serif;
+    background: url('../back\ 2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    /* ...other styles... */
+font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+
+    .hero {
+        position: relative;
+        background: url('../back\ 2.jpeg') no-repeat center center;
+        background-size: cover;
+      }
+      
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(24,24,24,0.5); /* semi-transparent overlay */
+        z-index: 1;
+      }
+      
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
 }
 
-/* login */
+/* login 
 
 .login-container {
     width: 300px;
@@ -47,8 +70,90 @@ button:hover {
     font-size: 14px;
 }
 
+*/
 
 
+/* --- Responsive Login Container --- */
+.login-container {
+    /* Use max-width to prevent it from getting too wide on large screens */
+    max-width: 400px; 
+    
+    /* Use a percentage width to allow it to shrink on smaller screens */
+    width: 90%; 
+    
+    /* Center the container with automatic horizontal margins */
+    margin: 50px auto; 
+    
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* This makes padding and borders part of the element's total width/height */
+    box-sizing: border-box; 
+}
+
+/* Style the form elements for a cleaner look */
+.login-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for consistent sizing */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073e6; /* A professional blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.login-container button:hover {
+    background-color: #005bb5; /* A darker shade for hover */
+}
+
+/* --- Media Query for Small Screens (e.g., Mobile Phones) --- */
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+body {
+    background: url('../background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+ .hero {
+        position: relative;
+        background: url('../background.jpg') no-repeat center center;
+        background-size: cover;
+      }
 /* body */
 
 header {
@@ -78,6 +183,78 @@ section {
     padding: 20px;
 }
 
+/* SERVICE */
+.services {
+    background: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.services h2 {
+    color: #003366;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 25px 20px;
+    max-width: 320px;
+    min-width: 250px;
+    flex: 1 1 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,51,102,0.12);
+}
+
+.service h3 {
+    font-size: 1.2rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.flags img {
+    width: 24px;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+@media (max-width: 900px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service {
+        max-width: 90vw;
+    }
+}
+.service.active {
+    border: 2px solid #0073e6;
+    box-shadow: 0 8px 32px rgba(0,115,230,0.15);
+}
+
+
+
 /* image */
 .responsive-img {
     width: 100%;
@@ -87,12 +264,7 @@ section {
     margin: auto;
 }
 
-/* video */
-video {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
+
 /* booking */
 #booking, #contact {
     background-color: #f8f8f8;
@@ -121,7 +293,7 @@ button {
 button:hover {
     background-color: #005bb5;
 }
-
+/* whatsapp */
 #whatsappFloatingButton {
     position: fixed;
     bottom: 20px;
@@ -135,7 +307,7 @@ button:hover {
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
+/*whatsapp */
 #whatsappFloatingButton img {
     width: 40px;
     height: 40px;
@@ -145,7 +317,7 @@ button:hover {
     background-color: #128C7E;
 }
 
-
+/* home */
 h1 {
     color: #022547;
     font-size: 24px;
@@ -161,6 +333,55 @@ footer {
     font-size: 16px;
     color: #f7eded;
     margin-top: 20px;
-    background-color: #005bb5;
+    background-color: #013468;
 }
+/* service */
 
+.services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .service {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    min-width: 250px;
+  }
+
+/* gallery */
+.gallery {
+    background: #222;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+  
+  .gallery h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(58,110,165,0.25);
+  }
+ 

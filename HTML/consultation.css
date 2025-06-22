@@ -1,0 +1,145 @@
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+
+body {
+    background: url('../background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+ .hero {
+        position: relative;
+        background: url('../background.jpg') no-repeat center center;
+        background-size: cover;
+      }
+
+/* --- General Body and Typography --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #003366; /* Consistent theme color */
+    text-align: center;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* --- Form Container Styling --- */
+section#booking, form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+/* --- Input Fields, Labels, and Buttons --- */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button#bookButton {
+    background-color: #28a745; /* Green for booking action */
+}
+
+button#bookButton:hover {
+    background-color: #218838;
+}
+
+
+/* --- Confirmation Message Styling (for JS) --- */
+#confirmationMessage {
+    text-align: center;
+    padding: 15px;
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    color: #0056b3;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+    
+    section#booking, form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+footer {
+    font-size: 16px;
+    color: #f7eded;
+    margin-top: 20px;
+    background-color: #013468;
+}
