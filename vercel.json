@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/home.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/service", "destination": "/service.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/service", "destination": "/service.html" },
+    { "source": "/consultation", "destination": "/consultation.html" },
+
+    { "source": "/styles", "destination": "/styles.css" },
+    { "source": "/login-style", "destination": "/login.css" },
+    { "source": "/service-style", "destination": "/service.css" },
+    { "source": "/gallery-style", "destination": "/gallery.css" },
+    { "source": "/consultation-style", "destination": "/consultation.css" },
+
+    {"source": "/login-script", "destination": "/login.js" },
+    { "source": "/service-script", "destination": "/service_js" },
+    { "source": "/gallery-script", "destination": "/gallery.js" },
+    { "source": "/consultation-script", "destination": "/consultation.js" },
+    { "source": "/main-script", "destination": "/script.js" }
+
+  ]
+}
