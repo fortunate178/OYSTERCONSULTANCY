@@ -5,12 +5,12 @@ body {
 }
 
 body {
-    background: url('../background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
  .hero {
         position: relative;
-        background: url('../background.jpg') no-repeat center center;
+        background: url('images/background.jpg') no-repeat center center;
         background-size: cover;
       }
 

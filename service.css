@@ -1,5 +1,5 @@
 body {
-    background: url('../back\ 2.jpeg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     /* ...other styles... */
 font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ font-family: Arial, sans-serif;
 
     .hero {
         position: relative;
-        background: url('../back\ 2.jpeg') no-repeat center center;
+        background: url('images/background.jpg') no-repeat center center;
         background-size: cover;
       }
       
@@ -103,12 +103,12 @@ font-family: Arial, sans-serif;
 }
 
 body {
-    background: url('../background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
  .hero {
         position: relative;
-        background: url('../background.jpg') no-repeat center center;
+        background: url('images/background.jpg') no-repeat center center;
         background-size: cover;
       }
 /* body */
