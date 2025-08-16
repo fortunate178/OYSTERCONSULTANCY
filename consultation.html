@@ -1,117 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>book consultation with us</title>
-     <link rel="stylesheet" href="consultation.css">
-    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Consultation — Oyster Consultancy</title>
 
- <link rel="icon" type="image/png" href="images/favicon.png.jpg">
-   
+  <!-- Link to stylesheet -->
+  <link rel="stylesheet" href="consultation.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png.jpg">
 </head>
 <body>
+  <header>
+    <img src="images/oyster-logo.png" alt="Oyster Consultancy logo" class="logo" width="100" height="100">
+  </header>
 
-    <header>
-        <img src="images/oyster-logo.png" alt="Oyster Consultancy " class="logo" width="100" height="100">
-            
+  <main>
+    <h1>Book a Consultation with Us</h1>
+    <hr>
 
+    <a href="home.html" class="back-link">← Back to Home Page</a>
 
-</header>
-    <main>
-        <h1>BOOK A CONSULTATION WITH US</h1> 
-        <hr>
+    <!-- Booking widget -->
+    <section id="booking" aria-labelledby="booking-title">
+      <h2 id="booking-title">Book a Consultation</h2>
+      <p>Choose a convenient time to discuss your immigration needs.</p>
 
-        <a href="home.html">BACK TO HOME PAGE</a>
-        <br>
+      <label for="booking-date">Select Date</label>
+      <input type="date" id="booking-date" name="booking_date" required aria-required="true">
 
-        
-<section id="booking">
-    <h2>Book a Consultation</h2>
-    <p>Choose a convenient time to discuss your immigration needs.</p>
-    <label for="date">Select Date:</label>
-    <input type="date" id="date" required>
+      <label for="booking-time">Select Time</label>
+      <select id="booking-time" name="booking_time" required>
+        <option value="">-- choose a time --</option>
+        <option value="10:00">10:00 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="14:00">2:00 PM</option>
+        <option value="16:00">4:00 PM</option>
+      </select>
 
-    <label for="time">Select Time:</label>
-    <select id="time">
-        <option>10:00 AM</option>
-        <option>12:00 PM</option>
-        <option>2:00 PM</option>
-        <option>4:00 PM</option>
-    </select>
+      <button id="bookButton" type="button">Book Now</button>
 
+      <div id="confirmationMessage" class="hidden" role="status" aria-live="polite"></div>
+    </section>
 
+    <!-- Contact / Personal information form -->
+    <form id="consultationForm" method="post" action="#" novalidate>
+      <h2>Personal Information</h2>
+      <p>Please submit accurate information so we can reach you.</p>
 
-<button id="bookButton">Book Now</button>
-</section>  
-       
-<!--FORMS ELEMENT-->
-<form method="get" action="">
-    <h2>Personal Information</h2>
-    <p>submit your correct information</p> 
-    <p> 
-        <label for="name"><b>Enter Fullname</b></label>
-     <input type="text" placeholder="Fullname" id="name" name="username">
-    </p>
-    <p>
-     <label for="email"><b>Enter your Email</b></label>
-     <input type="email" placeholder="Email Address" id="email" name="email">
-    </p>
-    <p>
-        <label for="password"><b>Enter your password</b></label>
-        <input type="password" minlength="6" placeholder="password" id="password" name="password">
-       </p>
-    
-       <p>
-        <label for="Date of birth"><b>Enter your Birth date</b></label>
-        <input type="date" placeholder="Day /Month /Year" id="date of birth" name="birth date">
-       </p>
+      <label for="fullName">Full name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
 
-       <p>
-        <label for="phone"><b>Phone Number</b></label>
-        <input type="pone" placeholder="number" id="phone" name="contact">
-       </p>
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-       <h2>Guidance Information</h2>
-       <p>provide your parent/ guidance information</p>
-       <p> 
-        <label for="name"><b>Enter Parent Name</b></label>
-     <input type="text" placeholder="PARENT / GUIDANCE" id="name" name="username">
-    </p>
+      <label for="dob">Date of birth</label>
+      <input type="date" id="dob" name="dob">
 
-       <p>
-        <label for="phone"><b>Phone Number</b></label>
-        <input type="pone" placeholder="number" id="phone" name="contact">
-       </p>
+      <label for="phoneNumber">Phone number</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+233 24 000 0000" pattern="[\d+\s()-]+" required>
 
+      <h2>Parent / Guardian Information</h2>
+      <p>Provide guardian details if applicant is under 18.</p>
 
-        <!---<p>
-                    <label for="submit"></label>
-                    <input type="submit"  id="submit">
-                   </p>
-                   --- -->
-                   <button type="submit">click to submit</button>
+      <label for="parentName">Parent / Guardian name</label>
+      <input type="text" id="parentName" name="parentName" placeholder="Parent / Guardian name">
 
-                   
-            </form>
+      <label for="parentPhone">Parent / Guardian phone</label>
+      <input type="tel" id="parentPhone" name="parentPhone" placeholder="+233 24 000 0000" pattern="[\d+\s()-]+">
 
-        
-    </main>
-    <footer>
-        <h1>Privacy Policy</h1>
-            <p>Protecting your personal data is our priority.</p>
-        
+      <button type="submit">Submit Consultation Form</button>
 
-            <p>© 2025 Oyster Consultancy | All rights reserved</p>
-           OYSTER CONSULTANCY &copy;2025
+      <p id="form-error" class="error hidden" role="alert" aria-live="assertive"></p>
+    </form>
+  </main>
 
-    </footer>
-    <script src="consultation.js"></script>
+  <footer>
+    <h3>Privacy Policy</h3>
+    <p>Protecting your personal data is our priority.</p>
+    <p>© 2025 Oyster Consultancy | All rights reserved</p>
+  </footer>
+
+  <script src="consultation.js"></script>
 </body>
 </html>
-
-
-
-
-
-

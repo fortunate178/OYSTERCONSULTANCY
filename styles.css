@@ -1,223 +1,304 @@
-.flags img {
-    width: 20px;
-    height: auto;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-.logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-body {
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    /* ...other styles... */
-font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-
-    .hero {
-        position: relative;
-        background: url('images/background.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(24,24,24,0.5); /* semi-transparent overlay */
-        z-index: 1;
-      }
-      
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
-
-}
-
-
-
+/* Reset and base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #000; /* solid black background instead of image */
+    color: #fff; /* white text on black */
+}
 
-} 
-        
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
 
+/* Header and Navigation */
 header {
     background-color: #003366;
     color: white;
-    padding: 20px;
-}  
+    padding: 20px 0;
+}
+
 nav ul {
     list-style-type: none;
     background-color: #0073e6;
-    padding: 10px;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
-section {
-    padding: 20px;
-
-}
-
-   
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-}
-
-button {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     background-color: #005bb5;
 }
 
-#whatsappFloatingButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
+/* Hero (no background image) */
+.hero {
+    position: relative;
+    background-color: #000; /* solid black */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(24,24,24,0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Main sections */
+section {
+    padding: 20px;
+}
+
+/* Home Section */
+#home h2 {
+    font-size: 2rem;
+    color: #00aced;
+    margin-bottom: 12px;
+}
+
+#home p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Services Section */
+.services {
+    background: #111; /* dark background for contrast */
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    color: #ddd;
+}
+
+.services h2 {
+    color: #00aced;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    padding: 25px 20px;
+    max-width: 320px;
+    min-width: 250px;
+    flex: 1 1 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #eee;
+}
+
+.service:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,115,230,0.8);
+}
+
+.service h3 {
+    font-size: 1.2rem;
+    color: #00aced;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    gap: 8px;
 }
 
-
-#whatsappFloatingButton img {
-    width: 40px;
-    height: 40px;
+.flags {
+    font-size: 1.2rem;
 }
 
-#whatsappFloatingButton:hover {
-    background-color: #128C7E;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f1f1;
-    text-align: center;
-}
-/* login */
+/* Login Container */
 .login-container {
-    width: 90%;
-    max-width: 350px;
-    margin: 30px auto;
-    padding: 20px;
-    background: rgb(247, 245, 245);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #fcfafa;
-    box-sizing: border-box;
+    width: 350px;
+    margin: 80px auto;
+    padding: 32px 28px 24px 28px;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+    text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #eee;
 }
 
-@media (max-width: 400px) {
-  .login-container {
-    padding: 10px;
-    max-width: 98vw;
-  }
+.login-container h2 {
+    margin-bottom: 24px;
+    color: #00aced;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-h2 {
-    color: #d7d9db;
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ebeaea;
-    border-radius: 5px;
+#loginForm label {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #fdfafadc;
-    color: white;
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    padding: 10px 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #222;
+    color: #eee;
+    transition: border-color 0.2s;
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: #00aced;
+    outline: none;
+    background: #111;
+}
+
+#loginForm button[type="submit"] {
+    background: #00aced;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-button:hover {
-    background-color: #edf1f5;
+#loginForm button[type="submit"]:hover {
+    background: #0086c9;
 }
 
 #error-message {
-    color: red;
-    font-size: 14px;
+    color: #ff4c4c;
+    margin-top: 16px;
+    min-height: 20px;
+    font-size: 0.95rem;
 }
 
-/* gallery */
+/* Gallery Section */
 .gallery {
-    background: #222;
+    background: #111;
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 3rem;
-  }
-  
-  .gallery h2 {
-    color: var(--accent);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+}
+
+.gallery h2 {
+    color: #00aced;
     margin-bottom: 1.5rem;
     text-align: center;
-  }
-  
-  .gallery-grid {
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-  }
-  
-  .gallery-grid img {
+}
+
+.gallery-grid img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .gallery-grid img:hover {
+}
+
+.gallery-grid img:hover {
     transform: scale(1.04);
-    box-shadow: 0 4px 16px rgba(58,110,165,0.25);
-  }
+    box-shadow: 0 4px 16px rgba(0,172,238,0.8);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h1 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #home p {
+        padding: 0 10px;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .login-container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 24px 20px;
+    }
+
+    .service-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
